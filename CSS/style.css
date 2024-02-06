@@ -1,0 +1,102 @@
+p{
+ color:rgb(0, 10, 18);
+}/*це селектор р*/
+
+h1{
+    color: blueviolet;
+}
+/*3 варіант додання CSS*/
+
+body{
+    color: brown;
+}
+b{
+    color: blue;
+}
+
+.text_color{
+    color: chartreuse;
+}/*до атрибуту class ми додаєм стиль та ставим . */
+
+#small-text{
+    color: rgb(1, 42, 1);
+}/*до атрибуту id ставим # */
+
+#another-text,.text_color {
+    color: fuchsia;
+}/*id i class можна поєднувати за умови якщо class має одне значення на сторінці або поєднувати селектори через кому коли портібно обєднати стиль */
+
+div p {
+    color:darkblue
+}/*селектор вказує на те що значення використовується тілька для р що знаходяться у блокі div */
+
+main>p {
+    color: rgb(242, 8, 8);
+}/*значення > вказує що вибираються тільки ті абзаци у яких батьківський обєкт це main*/
+
+/*Псевдокласи*/
+
+.link{
+     color: brown;
+     text-decoration:line-through;
+}/*text-decoration- лінія до визначеного рядка/слова ,яку за різним значенням можна ставити до слова*/
+.link:hover{
+    color: rgb(16, 151, 18);
+} /*hover- псевдоклас який працює при наведені мишки на рядок/слово*/
+.link:active{
+    text-decoration-color:blue;
+}/*active- псевдоклас який працює коли нажимати мишкою на рядок/слово*/
+.link:visited{
+    color: none;
+    text-decoration:none
+}/*visited- псевдоклас який змінює стан/колір коли по слову/рядку/посиланню нажали або перейшли*/
+
+
+.link2{
+    cursor: not-allowed;
+}
+
+input{
+    width: 300px;
+}
+input:focus{
+    width: 100px;
+}/*focus-працює коли нажимаєм на поле вводу*/
+
+/*псевдоелементи*/
+
+h4.main-text::after {
+    content: '123';
+    color: blue;
+}/*селектор додає інформацію у рядок через CSS*/
+
+h4.main-text::first-letter {
+    color: blue;
+    font-size: 30px;
+}/*first-letter-посилається тільки на першу літеру*/
+/*font-size-встановлює розмір літер*/
+
+p:last-of-type{
+    font-size: 30px;
+} /*last-of-type- виконує характеристики тільки останнім р на сторінці коду*/
+
+/*Задній фон сторінки/обєкту*/
+#block{
+    width: 20px;
+    height: 20px;
+    background-color:rgb(234, 13, 13)
+}  /*звертаємось до заднього фону*/
+  
+    
+body{
+    background-image: url('../images/1376932.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh
+}/*height- ставить катринку у повному екрані при любому зміні масштабу*/
+/* background-attachment- робить характерні властивості картинки стосовно наших дій на сайті (у випадку fixed-картинка залишається незмінною при пролистуванні сайту)*/
+
+
+
