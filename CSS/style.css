@@ -1,3 +1,7 @@
+*{
+  padding: 0;
+}/*цей селектор додає характеристики повністю для всих обєктів на сторінці*/
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap');
 p{
  color:rgb(0, 10, 18);
 }/*це селектор р*/
@@ -76,9 +80,9 @@ h4.main-text::first-letter {
 }/*first-letter-посилається тільки на першу літеру*/
 /*font-size-встановлює розмір літер*/
 
-p:last-of-type{
+p:first-of-type{
     font-size: 30px;
-} /*last-of-type- виконує характеристики тільки останнім р на сторінці коду*/
+} /*first-of-type- виконує характеристики тільки початковим р на сторінці коду*/
 
 /*Задній фон сторінки/обєкту*/
 #block{
@@ -89,14 +93,49 @@ p:last-of-type{
   
     
 body{
+    color: aliceblue;
     background-image: url('../images/1376932.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     height: 100vh
+    
 }/*height- ставить катринку у повному екрані при любому зміні масштабу*/
 /* background-attachment- робить характерні властивості картинки стосовно наших дій на сайті (у випадку fixed-картинка залишається незмінною при пролистуванні сайту)*/
 
+/*Стилі для тексту */
 
+p.main-text1{
+    color: rgb(252, 252, 252);
+    text-align: center;/*розміщення тексту*/
+    font-size: 15px;
+    font-style: italic;/*властивість тексту ( в цьому випадку косий текст*/
+    font-weight: 700;/*жирність тексту*/
+    text-transform: capitalize;/*значення для будови слова (прописуються букви з великої чи з малої літери)*/
+    line-height: 10px;/*відступи між рядками тексту*/
+    word-spacing: 20px;/*відступи між словами тексту*/
+    letter-spacing: 6px;/*відступи між буквами слова*/
+    /*font-family: Georgia, 'Times New Roman', Times, serif;/*встановлення шрифту в текст який є на пк*/
+    font-family:'Sixtyfour';
+}
+
+/*Стилі для блоків*/
+
+#block{
+    background: red ;
+    color:rgb(249, 247, 247);
+    width: 100px;
+    height: 200px;
+    border: 4px dotted #f7f0f0;/*значення обводки(рамки) блоку*//*dotted форма обводки (soled-суцільна рамка)*/
+    border-left: 0;/*обводка з одної сторони*/
+    border-radius: 100px/*якщо одне значення то працює для всіх кутів , але можна додавати значення для кожного кута*/;/*округлість кутів (визначається у px або %)*/
+    border-bottom-left-radius: 0px;/*звертаємся саме до певного кута*/
+    opacity: 0.5;/*прозорість обєкту (від 0 до 1 )*/
+    margin: 40px/*можна додавати значення на кожну сторону(до 4 значень)*/;/*відступи з усіх сторін обєкту*/
+    margin-left: 100px;/*відступи для однієї сторіни обєкту*/
+    padding: 30px;/*внутрішнє значення обєкту- відступи із середини обєкту*/
+    display: block; /*вказуємо тип та формант елемента/обєкта*/
+
+}
 
