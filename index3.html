@@ -11,8 +11,18 @@
        //1 спосіб пропису джава скрипт без створення окремої сторінки
     </script><!--краще прописувати тег підєднання скрипту у кінці body-->
 
+    <form onsubmit="return checkForm(this)">
+        <input type="text" name="username" placeholder="Ведіть імя"><br>
+        <input type="email" name="email" placeholder="Ведіть email"><br>
+        <input type="password" name="password" placeholder="Ведіть password"><br>
+        <input type="radio" name="gender" placeholder="male">Чоловік<br>
+        <input type="radio" name="gender" placeholder="female">Жінка<br>
+        <button>Надіслати</button>
+        <span id="error"></span>
+    </form>
+
     <button onclick="btnClick()">Обробник подій</button>
     <script src="JS/index.js"></script>
-    <script src="JS/main.js"></script>
+  
 </body>
 </html>
