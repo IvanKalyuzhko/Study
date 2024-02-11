@@ -10,13 +10,13 @@ function checkForm(el){
     var gender = el.gender.value;
   
     var error = "";
-    if(username.lenght<2)
+    if(username.length<2)
       error='Ім\'я занадто мале';//В цьому речені ставим слеш у випадку якщо в тексті наявні лапки які однакові із тими що ставляться у значення
-    else if(email.lenght<2)
+    else if(email.length<2)
       error='email занадто малий';
-    else if(email.includes('@'))//includes - перевіряє чи є значення яке ми вказуємо у дужках
+    else if(!email.includes('@'))//includes - перевіряє чи є значення яке ми вказуємо у дужках
       error='email не має @';
-    else if(password.lenght<2)
+    else if(password.length<2)
       error='password занадто малий';
     else if(gender == null|| gender == '')
       error='gender error';
@@ -25,5 +25,8 @@ function checkForm(el){
       document.getElementById('error').innerText = error;
       return false;
     }
-    return false;
+      document.getElementById('error').innerText = '';
+      window.location = 'https://google.com'
+    
+   return false;
 }
