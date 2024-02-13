@@ -30,3 +30,26 @@ function checkForm(el){
     
    return false;
 }
+
+//Таймери та інтервали - можна створити такий код який буде виконаний через певний проміжок часу (інтервал буде постійно виконувати код через якийсь проміжок часу)
+
+var id= setInterval(my_func, 1000/*тут зазначаємо мілісекунди(1сек=1000млсек)*/)//в цю фуекцію передають два параметра (сама функція яка буде виконуватись та час через який буде спрацьовувати функція)
+
+var counter = 0 
+function my_func( ){
+     document.getElementById("timer").innerHTML="Counter:"+ counter
+     counter++
+}
+
+function stopInterval() {
+     clearInterval(id) //зупиняє інтервал
+     clearTimeout(timerid)
+}
+
+setInterval(function(){//анонімна функція
+     console.log("sec.")
+}, 1000)//таким методом можна прописувати інтервал
+
+setTimeout(function(){
+   alert("message")
+}, 3000)
