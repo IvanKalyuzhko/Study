@@ -3,12 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Java script</title>
 </head>
 <body>
-    
-    <div id="time"></div>
+    <noscript>Java script not working</noscript><!--тег показується тільки тоді коли у браузері джава скрипт відключений-->
+    <script>
+       //1 спосіб пропису джава скрипт без створення окремої сторінки
+    </script><!--краще прописувати тег підєднання скрипту у кінці body-->
 
-    <script src="JS/index2.js"></script>
+    <form onsubmit="return checkForm(this)">
+        <input type="text" name="username" placeholder="Ведіть імя"><br>
+        <input type="email" name="email" placeholder="Ведіть email"><br>
+        <input type="password" name="password" placeholder="Ведіть password"><br>
+        <input type="radio" name="gender" placeholder="male">Чоловік<br>
+        <input type="radio" name="gender" placeholder="female">Жінка<br>
+        <button>Надіслати</button>
+        <span id="error"></span>
+    </form>
+
+    <div id="timer"></div>
+    <button onclick="stopInterval()">Зупинити</button>
+
+    <button onclick="btnClick()">Обробник подій</button>
+    <script src="JS/index4.js"></script>
+    <script src="JS/main4.js"></script>
+  
 </body>
 </html>

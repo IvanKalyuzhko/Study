@@ -1,32 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="ua">
+ <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java script</title>
-</head>
-<body>
-    <noscript>Java script not working</noscript><!--тег показується тільки тоді коли у браузері джава скрипт відключений-->
-    <script>
-       //1 спосіб пропису джава скрипт без створення окремої сторінки
-    </script><!--краще прописувати тег підєднання скрипту у кінці body-->
+    <title>Новий документ із CSS</title>
+    <link rel="stylesheet" href="CSS/style3.css">
+    <!--3 варіант додання CSS-->
+ </head>
+ <body>
+     <h1 style="color:mediumblue">Вкладка за посиланням</h1><!--style- можна додавати до багатьох тегів та додавати багато характеристик-->
+     <!--1 варіант додання CSS-->
+     <style>
+        h1{
+            color: blueviolet;
+        }
+     </style><!--прописуємо характеристики до тегу р тож так і називаєм селектор h1 у CSS-->
+     <!--2 варіант додання CSS-->
 
-    <form onsubmit="return checkForm(this)">
-        <input type="text" name="username" placeholder="Ведіть імя"><br>
-        <input type="email" name="email" placeholder="Ведіть email"><br>
-        <input type="password" name="password" placeholder="Ведіть password"><br>
-        <input type="radio" name="gender" placeholder="male">Чоловік<br>
-        <input type="radio" name="gender" placeholder="female">Жінка<br>
-        <button>Надіслати</button>
-        <span id="error"></span>
-    </form>
+     <p class="text_color">Giv me <b>your</b> many 1</p><!--за допомогою class можна додавати стиль та можуть повторюватись на одні і ті ж самій сторінці декілька разів -->
+     <p>Giv me <b>your</b> many 2</p>
+     <p id="small-text">Giv me <b class="text_color">your</b> many 3</p><!--за допомогою іd значення не повторюється на одній і ті ж самій сторінці-->
+     
+     <p class="text_color">Однакові кольори із <b id="another-text">різним способом </b>додавання CSS</p>
+      
+     <div>
+        <p>My baby</p>
+          <p>500/500</p>
+        <p>My many</p>
+      </div>
 
-    <div id="timer"></div>
-    <button onclick="stopInterval()">Зупинити</button>
+      <div1>
+           <main>
+             <p>My baby</p>
+             <p>500/500</p>
+           </main>
+       <p>My many</p>
+      </div1>
 
-    <button onclick="btnClick()">Обробник подій</button>
-    <script src="JS/index.js"></script>
-    <script src="JS/main.js"></script>
-  
-</body>
+      <h2>Псевдокласи та псевдоелементи</h2>
+      <a href="#" class="link">Посилання</a>
+      <h3 class="link2"> зміна курсору при наведенні</h3>
+     
+      <h4 class="main-text">Some text</h4>
+
+      <p class="main-text1">Стилі для рядків у великих текстах , текст для прикладу Wherever we talk about Personal Data below, we mean any information that can either itself identify you as an individual ("Personally Identifying Information") or that can be connected to you indirectly by linking it to Personally Identifying Information. Valve also processes anonymous data, aggregated or not, to analyze and produce statistics related to the habits, usage patterns, and demographics of customers as a group or as individuals. Such anonymous data does not allow the identification of the customers to which it relates. Valve may share anonymous data, aggregated or not, with third parties. </p>
+      
+      <div id="block"></div>
+
+ </body>
 </html>
